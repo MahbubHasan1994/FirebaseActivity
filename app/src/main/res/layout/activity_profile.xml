@@ -7,33 +7,35 @@
     android:orientation="vertical"
     tools:context=".ProfileActivity">
 
-    <TextView
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:background="@color/colorAccent"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="ABCDEFGHI"
-        android:textSize="25sp"/>
-
-    <ImageView
-        android:id="@+id/imageview"
-        android:layout_gravity="center"
-        android:scaleType="centerCrop"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:src="@drawable/logo"/>
+        android:layout_height="wrap_content" />
 
     <EditText
-        android:id="@+id/edittext"
-        android:layout_marginTop="30dp"
+        android:id="@+id/nameEditTextID"
+        android:layout_marginTop="15dp"
+        android:hint="Enter Name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter"
-        android:textSize="25sp"/>
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+
+    <EditText
+        android:id="@+id/ageEditTextID"
+        android:layout_marginTop="15dp"
+        android:hint="Enter Age"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
 
     <Button
-        android:id="@+id/okButton"
-        android:layout_marginTop="20dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="OK"/>
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:id="@+id/saveButtonID"
+        android:layout_marginTop="15dp"
+        android:text="Save Data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
 
 </LinearLayout>

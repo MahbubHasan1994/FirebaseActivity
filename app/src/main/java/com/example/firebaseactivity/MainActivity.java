@@ -72,10 +72,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mAuth.signInWithEmailAndPassword(email , password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
+
+                progressBar.setVisibility(View.GONE);
                 if(task.isSuccessful()){
 
-                    progressBar.setVisibility(View.GONE);
-                    Intent intent = new Intent(MainActivity.this , ProfileActivity.class);
+                    finish();
+                    Intent intent = new Intent(MainActivity.this ,ProfileActivity.class);
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     startActivity(intent);
 
